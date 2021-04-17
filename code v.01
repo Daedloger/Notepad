@@ -1,6 +1,7 @@
 from tkinter import messagebox as ms
 
 
+#first function for "About" button
 def About():
     ms.showinfo(title = 'About', message = "Simple notepad")
 
@@ -17,6 +18,8 @@ root.title("Notepad++")
 
 mainmenu = Menu(root)
 
+
+#File
 filemenu = Menu(root, tearoff = 0)
 
 filemenu.add_command(label = 'New')
@@ -26,7 +29,7 @@ filemenu.add_separator()
 filemenu.add_command(label = 'Exit')
 mainmenu.add_cascade(label = 'File', menu = filemenu)
 
-
+#Edit
 editmenu = Menu(root, tearoff = 0)
 
 editmenu.add_command(label = 'Undo')
@@ -35,7 +38,7 @@ editmenu.add_command(label = 'Copy')
 editmenu.add_command(label = 'Cut')
 editmenu.add_command(label = 'Paste')
 
-
+#Help
 helpmenu = Menu(root, tearoff = 0)
 
 helpmenu.add_command(label = 'About', command = About)
@@ -58,12 +61,6 @@ scrl = Scrollbar(txt, command = txt.yview)
 scrl.place(x = 782, y = 0, height = 600)
 
 txt.config(yscrollcommand = scrl.set)
-
-
-'''
-txt.insert(1.0, "Hi! \n")
-txt.insert(2.10, 'From "Prestige"!\n')
-'''
 
 
 root.mainloop()
