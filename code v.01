@@ -1,4 +1,5 @@
-from tkinter import messagebox as ms
+from tkinter import *
+import messagebox as ms
 
 
 def About():
